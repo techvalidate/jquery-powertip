@@ -216,7 +216,8 @@ function computePositionCompensation(windowWidth, windowHeight) {
 	var bodyWidthWithMargin,
 		bodyHeightWithMargin,
 		offsets,
-		bodyPositionPx;
+		bodyPositionPx,
+		$body = $('body');
 
 	switch ($body.css('position')) {
 		case 'absolute':
