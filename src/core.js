@@ -9,8 +9,7 @@
 
 // useful private variables
 var $document = $(document),
-	$window = $(window),
-	$body = $('body');
+	$window = $(window);
 
 // constants
 var DATA_DISPLAYCONTROLLER = 'displayController',

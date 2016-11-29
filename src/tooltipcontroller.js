@@ -20,12 +20,9 @@ function TooltipController(options) {
 	// build and append tooltip div if it does not already exist
 	if (tipElement.length === 0) {
 		tipElement = $('<div/>', { id: options.popupId });
-		// grab body element if it was not populated when the script loaded
-		// note: this hack exists solely for jsfiddle support
-		if ($body.length === 0) {
-			$body = $('body');
-		}
-		$body.append(tipElement);
+		// we need a reliable reference to body, since some javascript libraries/frameworks replace body. Removed module reference $body
+		// (TurboLinks, for example)
+		$('body').append(tipElement);
 		// remember the tooltip elements that the plugin has created
 		session.tooltips = session.tooltips ? session.tooltips.add(tipElement) : tipElement;
 	}
